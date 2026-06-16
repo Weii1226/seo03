@@ -1,7 +1,7 @@
 function createProductCard(product) {
     return `
         <div class="product-card">
-            <a href="product.html?id=${product.id}"><img src="${product.image}" alt="${product.name}"></a>
+            <a href="product.html?id=${product.id}"><img src="${product.image}" alt="${product.name}" title="${product.hover_title}"></a>
             <div class="product-card-body">
                 <h3><a href="product.html?id=${product.id}" style="color: inherit; text-decoration: none;">${product.name}</a></h3>
                 <div class="price">${product.price}</div>
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (product) {
             detailContainer.innerHTML = `
                 <div class="img-container">
-                    <img src="${product.image}" alt="${product.name}">
+                    <img src="${product.image}" alt="${product.name}" title="${product.hover_title}">
                 </div>
                 <div class="info">
                     <h1>${product.name}</h1>
